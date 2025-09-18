@@ -6,22 +6,38 @@
 //
 
 import SpriteKit
+import AVFoundation
+import SwiftUI
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
+    
+    
+    
+    let playButton = SKSpriteNode(imageNamed: "Married_in_red_title_screen.pdf.jpg")
+    // called when scene loads
+    override func didMove(to view: SKView){
+        playButton.name = "NewGame"
+        playButton.position = CGPoint (x: frame.midX, y: frame.midY)
+        setUpScene()
+    }
+    
     
     
     fileprivate var label : SKLabelNode?
     fileprivate var spinnyNode : SKShapeNode?
-
+    
+//        Variable to create the player's body as a SKSprite, and a titleMap as a SKTitleMap.
+//        var player: SKSpriteNode
+//        var titleMap: SKTitleMapNode!
+    
     
     class func newGameScene() -> GameScene {
-        // Load 'GameScene.sks' as an SKScene.
+
         guard let scene = SKScene(fileNamed: "GameScene") as? GameScene else {
             print("Failed to load GameScene.sks")
             abort()
         }
         
-        // Set the scale mode to scale to fit the window
         scene.scaleMode = .aspectFill
         
         return scene
@@ -45,13 +61,48 @@ class GameScene: SKScene {
             spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
                                               SKAction.fadeOut(withDuration: 0.5),
                                               SKAction.removeFromParent()]))
+            
         }
+        func didMove(to view: SKView){
+            physicsWorld.contactDelegate = self
+            physicsWorld.gravity = .zero
+            //            This connects to a titleSet, that right now, doesn't have a name ->
+            //            if let titleSet = SKTitleSet(named: ""){
+            //            titleMap = SKTitleMapNode(titleSet: titleSet, columns: 20, rows: 20, titleSize: CGSize(width: 64, height: 64))
+        }
+        
+        let pos = CGPoint(x: self.size.width / 2, y: self.size.height / 2)
+        let cameraNode = SKCameraNode()
+        cameraNode.position = pos
+        self.addChild(cameraNode)
+        self.camera = cameraNode
+        
+        print("setup scene called")
     }
     
-    override func didMove(to view: SKView) {
-        self.setUpScene()
+    func createTextLabel(with label: String) -> SKLabelNode{
+        
+        let textLabel = SKLabelNode(text: label)
+        
+        textLabel.fontSize = 65
+        
+        textLabel.fontColor = .red
+        
+        textLabel.fontName = "AvenirNext-Bold"
+        textLabel.verticalAlignmentMode = .center
+        textLabel.horizontalAlignmentMode = .center
+        
+        return textLabel
     }
-
+    
+//    if ("Paragraph" == fade out) {
+//        
+//    }
+    
+    
+    let Invitation = SKLabelNode(fontNamed: "You recieve a wedding invitiation, from...Myeong-hoon. ")
+    
+    
     func makeSpinny(at pos: CGPoint, color: SKColor) {
         if let spinny = self.spinnyNode?.copy() as! SKShapeNode? {
             spinny.position = pos
@@ -61,7 +112,7 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
+       
     }
 }
 

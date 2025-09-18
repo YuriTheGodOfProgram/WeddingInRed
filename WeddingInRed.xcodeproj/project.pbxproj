@@ -6,10 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8DA596A32E7B208E00977DD0 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA596A22E7B208E00977DD0 /* SpriteKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8DA5965C2E7B208400977DD0 /* WeddingInRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingInRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA5966D2E7B208400977DD0 /* WeddingInRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingInRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA5967D2E7B208400977DD0 /* WeddingInRed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeddingInRed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DA596A22E7B208E00977DD0 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/System/Library/Frameworks/SpriteKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -20,6 +25,10 @@
 				Assets.xcassets,
 				GameScene.sks,
 				GameScene.swift,
+				Married_in_red_title_screen.pdf.jpg,
+				Paragraph.jpg,
+				"Unknown-1.jpeg",
+				"Unknown-2.jpeg",
 			);
 			target = 8DA5965B2E7B208400977DD0 /* WeddingInRed iOS */;
 		};
@@ -28,8 +37,11 @@
 			membershipExceptions = (
 				Actions.sks,
 				Assets.xcassets,
-				GameScene.sks,
 				GameScene.swift,
+				Married_in_red_title_screen.pdf.jpg,
+				Paragraph.jpg,
+				"Unknown-1.jpeg",
+				"Unknown-2.jpeg",
 			);
 			target = 8DA5966C2E7B208400977DD0 /* WeddingInRed tvOS */;
 		};
@@ -40,6 +52,10 @@
 				Assets.xcassets,
 				GameScene.sks,
 				GameScene.swift,
+				Married_in_red_title_screen.pdf.jpg,
+				Paragraph.jpg,
+				"Unknown-1.jpeg",
+				"Unknown-2.jpeg",
 			);
 			target = 8DA5967C2E7B208400977DD0 /* WeddingInRed macOS */;
 		};
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA596A32E7B208E00977DD0 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +122,7 @@
 				8DA5965E2E7B208400977DD0 /* WeddingInRed iOS */,
 				8DA5966E2E7B208400977DD0 /* WeddingInRed tvOS */,
 				8DA5967E2E7B208400977DD0 /* WeddingInRed macOS */,
+				8DA596A12E7B208E00977DD0 /* Frameworks */,
 				8DA5965D2E7B208400977DD0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +135,14 @@
 				8DA5967D2E7B208400977DD0 /* WeddingInRed.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8DA596A12E7B208E00977DD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DA596A22E7B208E00977DD0 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +312,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7KBU9JJGL5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -316,6 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = 7KBU9JJGL5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
