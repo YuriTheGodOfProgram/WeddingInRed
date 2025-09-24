@@ -1,10 +1,3 @@
-//
-//  GameScene.swift
-//  WeddingInRed Shared
-//
-//  Created by Nicolas Carswell on 9/17/25.
-//
-
 import SpriteKit
 import AVFoundation
 import SwiftUI
